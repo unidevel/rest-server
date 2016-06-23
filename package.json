@@ -1,0 +1,20 @@
+{
+  "name": "rest-server",
+  "version": "0.1.0",
+  "description": "Simply rest server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jerry",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-convert": "^1.2.0",
+    "koa.io": "0.0.3"
+  },
+  "devDependencies": {
+    "superagent": "^2.0.0"
+  }
+}

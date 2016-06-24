@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6" > <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7" > <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8" > <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9" > <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <title>REST API docs</title>
+</head>
+<body>
+  <nav>
+    <ol>
+    {{#mapping}}
+      <li><a href="{{base}}{{uri}}">{{uri}}</a>[{{config.method}}]</li>
+    {{/mapping}}
+    </ol>
+  </nav>
+  <article>
+    {{#selected}}
+    <h1>{{uri}}</h1>
+    <hr/>
+    <ul>
+      {{#config}}
+      <li>Request method: {{method}}</li>
+        {{#config}}
+        <li>Description: {{comment}}</li>
+        <li>validate: {{config.validate}}</li>
+        <li>arguments:
+          <ol>
+            {{#args}}
+              <li>{{name}} - Required:{{optional}}, type:{{type}} - {{comment}}</li>
+            {{/args}}
+          </ol>
+        </li>
+        {{/config}}
+      {{/config}}
+    </ul>
+    {{/selected}}
+  </article>
+</body>
+</html>

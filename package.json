@@ -1,6 +1,6 @@
 {
   "name": "rest-wrapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simply rest wrapper",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,8 @@
     "node": ">= 4.4.0"
   },
   "files": [
-    "lib"
+    "lib",
+    "*.js"
   ],
   "bin": {
     "rest-wrapper": "cli.js"

@@ -34,6 +34,9 @@
   "files": [
     "lib"
   ],
+  "bin": {
+    "rest-server": "cli.js"
+  },
   "bugs": {
     "url": "https://github.com/unidevel/rest-server/issues"
   },

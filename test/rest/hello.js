@@ -1,12 +1,12 @@
 'use strict';
 
 class hello {
-  route(reg){
-    reg.get(this.sayWords, '/say', {
+  route(ctx){
+    ctx.get(this.sayWords, '/say', {
       validate: true,
       comment: 'say some words',
       args: [
-        reg.def('words', 'string', 'words to say')
+        ctx.arg('words', 'string', 'words to say')
       ]})
       .post(this.echo)
   }

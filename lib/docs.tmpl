@@ -11,12 +11,40 @@
   <meta content="black" name="apple-mobile-web-app-status-bar-style" />
   <meta content="telephone=no" name="format-detection" />
   <title>REST API docs</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+    }
+    body >nav {
+      width: auto;
+      padding-right: 20px;
+      background-color: #fafafa;
+    }
+    body >nav ol {
+      list-style: circle;
+    }
+    body >nav ol li {
+      padding-bottom: 5px;
+    }
+    body >article {
+      padding: 10px;
+      flex: 1 auto;
+    }
+
+  </style>
 </head>
 <body>
   <nav>
     <ol>
     {{#mapping}}
-      <li><a href="{{base}}{{uri}}">{{uri}}</a>[{{config.method}}]</li>
+      <li><a href="{{base}}{{uri}}">{{uri}}</a>[{{method}}]</li>
     {{/mapping}}
     </ol>
   </nav>
@@ -25,20 +53,16 @@
     <h1>{{uri}}</h1>
     <hr/>
     <ul>
-      {{#config}}
       <li>Request method: {{method}}</li>
-        {{#config}}
-        <li>Description: {{comment}}</li>
-        <li>validate: {{config.validate}}</li>
-        <li>arguments:
-          <ol>
-            {{#args}}
-              <li>{{name}} - Required:{{optional}}, type:{{type}} - {{comment}}</li>
-            {{/args}}
-          </ol>
-        </li>
-        {{/config}}
-      {{/config}}
+      {{#comment}}<li>Description: {{comment}}</li>{{/comment}}
+      <li>Check: {{validate}}</li>
+      {{#args}}
+      <li>Arguments:
+        <ol>
+            <li>{{name}} - type:{{type}}, {{required}} - {{comment}}</li>
+        </ol>
+      </li>
+      {{/args}}
     </ul>
     {{/selected}}
   </article>

@@ -1,7 +1,7 @@
 {
-  "name": "rest-server",
+  "name": "rest-wrapper",
   "version": "0.1.0",
-  "description": "Simply rest server",
+  "description": "Simply rest wrapper",
   "main": "index.js",
   "scripts": {
     "test": "ava 'test/*.js'"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unidevel/rest-server.git"
+    "url": "git+https://github.com/unidevel/rest-wrapper.git"
   },
   "keywords": [
     "web",
@@ -35,10 +35,10 @@
     "lib"
   ],
   "bin": {
-    "rest-server": "cli.js"
+    "rest-wrapper": "cli.js"
   },
   "bugs": {
-    "url": "https://github.com/unidevel/rest-server/issues"
+    "url": "https://github.com/unidevel/rest-wrapper/issues"
   },
-  "homepage": "https://github.com/unidevel/rest-server"
+  "homepage": "https://github.com/unidevel/rest-wrapper"
 }

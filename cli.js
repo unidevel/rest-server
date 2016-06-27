@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const DEFAULT_PORT = 3000;

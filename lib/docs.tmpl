@@ -42,11 +42,14 @@
 </head>
 <body>
   <nav>
-    <ol>
-    {{#mapping}}
-      <li><a href="{{base}}{{uri}}">{{uri}}</a>[{{method}}]</li>
-    {{/mapping}}
-    </ol>
+    {{#mappings}}
+      <h2>{{name}}</h2>
+      <ol>
+      {{#mapping}}
+        <li><a href="{{base}}/{{index}}{{uri}}">{{uri}}</a>[{{method}}]</li>
+      {{/mapping}}
+      </ol>
+    {{/mappings}}
   </nav>
   <article>
     {{#selected}}

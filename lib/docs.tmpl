@@ -59,13 +59,16 @@
       <li>Request method: {{method}}</li>
       {{#comment}}<li>Description: {{comment}}</li>{{/comment}}
       <li>Check: {{validate}}</li>
-      {{#args}}
       <li>Arguments:
         <ol>
-            <li>{{name}} - type:{{type}}, {{required}} - {{comment}}</li>
+          {{#args}}
+          <li>{{name}} - type:{{type}}, {{required}} - {{comment}}</li>
+          {{/args}}
         </ol>
       </li>
-      {{/args}}
+      {{#return}}
+      <li>Return: {{return}}</li>
+      {{/return}}
     </ul>
     {{/selected}}
   </article>

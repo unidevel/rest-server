@@ -1,6 +1,6 @@
 {
   "name": "rest-wrapper",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Simply rest wrapper",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "co": "^4.6.0",
     "debug": "^2.2.0",
+    "http-errors": "^1.5.0",
     "koa": "^1.2.0",
     "koa-bodyparser": "^2.2.0",
     "koa-convert": "^1.2.0",

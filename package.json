@@ -1,12 +1,12 @@
 {
   "name": "rest-wrapper",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Simply rest wrapper",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "ava 'test/*.js'"
   },
-  "author": "Jerry",
+  "author": "unidevel",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -37,11 +37,12 @@
     "node": ">= 4.2.0"
   },
   "files": [
+    "bin",
     "lib",
     "*.js"
   ],
   "bin": {
-    "rest-wrapper": "cli.js"
+    "rest-wrapper": "bin/server"
   },
   "bugs": {
     "url": "https://github.com/unidevel/rest-wrapper/issues"

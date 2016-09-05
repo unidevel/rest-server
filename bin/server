@@ -32,7 +32,7 @@ var path = require('path');
 dir = path.join(cwd, dir);
 
 //console.log(process.argv, dir, recursive, port);
-var restServer = require('./index');
+var restServer = require('../lib/index');
 var server = null;
 server = restServer({
   docs: true,
